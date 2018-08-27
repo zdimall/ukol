@@ -1,0 +1,136 @@
+@media (min-width:600px){
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: 10px;
+    }
+
+    .header {
+        grid-column: span 12;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .figure1, .figure2, .figure3 {
+        grid-column: span 3;
+    }
+
+    .figure4 {
+        grid-column: span 3;
+        grid-row: span 2;
+    }
+
+    .figure5 {
+        grid-column: span 3;
+    }
+
+    .figure6 {
+        grid-column: span 6;
+    }
+
+    .figure-img:hover,
+    .figure-img-tall:hover,
+    .figure-img-long:hover {
+        box-shadow: 0px 0px 25px #000;
+        -ms-transform: scale(1.25); /* IE 9 */
+        -webkit-transform: scale(1.25); /* Safari 3-8 */
+        transform: scale(1.25);
+    }
+}
+
+@media (max-width: 599px){
+    .figure4, .figure6 {
+        min-height: 100px;
+        height: 455px;
+    }
+}
+
+body {
+    max-width: 1920px;
+    margin: 0 auto;
+    background-color: #cacaca;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 800;
+    margin-right: 20px;
+}
+
+figure{
+    min-height: 100px;
+    margin: 10px;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.figure-img,
+.figure-img-tall,
+.figure-img-long {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .2s;
+}
+
+.figure-img{
+    max-height: 455px;
+}
+.header {
+    padding: 42px 50px;
+    background-color: #fff;
+    color: #000;
+    transition: transform .2s;
+}
+
+.wrap{
+    height: 60px;
+    width: 100%;
+    min-width: 260px;
+    max-width: 600px;
+    position: relative;
+}
+
+.search {
+    width: 100%;
+    border: 2px solid #000;
+    background-color: #cacaca;
+    padding: 0;
+    height: 60px;
+    border-radius: 0px;
+    outline: none;
+    color: #000;
+    font-size: 16px;
+    }
+
+.searchButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 60px;
+    height: 65px;
+    text-align: center;
+    background: none;
+    border: none;
+    color: #000;
+    border-radius: 0px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+ul {
+    border: 2px solid black;
+    width: 100%;
+}
+li {
+    padding: 10px 10px 10px 10px;
+    background-color: #fff;
+}
